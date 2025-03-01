@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methods loops</title>
+</head>
+<body>
+<!-- string methods  act1-->
+
+<!-- activity2  -->
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<!-- activity3  -->
+<!-- displayed using document.write  -->
+
+
+<!-- activity4  -->
+<p id="demo3"></p>
+
+<!-- acp activity  -->
+<p id="result"></p>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.write(text.length);
+document.write("<br>");
+var text1 = "HELLO WORLD";
+document.write(text1.charAt(0));
+document.write("<br>");
+
+let text2 = "hello";
+document.write(text2.toUpperCase());
+document.write("<br>");
+let text3 = "HELLO";
+document.write(text3.toLowerCase());
+document.write("<br>");
+document.write(Math.random());
+document.write("<br>");
+document.write(Math.random() * 100);
+document.write("<br>");
+document.write(Math.floor(4.78));
+
+
+//acti2
+/*A regular expression is a sequence of characters that forms a search pattern.
+
+The search pattern can be used for text search and text replace operations.*/ 
+
+function myFunction() {
+var str = "I learnt about Methods";
+var patt = new RegExp("learnt");
+var res = patt.test(str);
+document.getElementById("demo").innerHTML = res;
+}
+
+//activity3
+var fruits = ["Apple", "Mango", "Grapes", "Watermelon", "Jack Fruit", "Banana"];
+
+for (i = 0; i < fruits.length; i++) {
+var text5 = fruits[i] + "<br>";
+//document.getElementById("demo1").innerHTML = text;
+document.write(text5);
+}
+
+// switch activity
+
+    var day;
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+    }
+    document.getElementById("demo3").innerHTML = "Today is " + day;
+
+
+    //acp 
+
+     //for loop
+
+        var number = "";
+        for (i = 1; i < 11; i++) {
+            number += i + "<br>";
+        }
+        document.getElementById("result").innerHTML = number;
+        // random value is rounded of 
+        document.write("The random value is " + Math.floor(Math.random() * 100));
+        document.write("<br>");
+        // for displaying current Date
+        var date = new Date();
+        document.write("Today's Date is " + date.getDate());
+</script>
+</body>
+</html>
